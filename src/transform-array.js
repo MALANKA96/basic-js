@@ -1,12 +1,12 @@
-const CustomError = require("../extensions/custom-error");
+
 module.exports = function transform(arr) {
    if (Array.isArray(arr) == false) {
      throw 'arr is not an Array';
    } 
  let resultArr =[];
- 
+   let nextElement = 0;
  for (let i = 0; i < arr.length; i++) {
-    let nextElement = 0;
+  
 switch (arr[i]){
 case '--discard-next':
 nextElement = i+1;
